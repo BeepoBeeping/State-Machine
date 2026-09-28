@@ -15,17 +15,18 @@ public class RunState : State
 
     public override void Enter()
     {
+        player.anim.SetBool("isWalk", true);
         speed = 3;
         base.Enter();
         horizontalInput = verticalInput = 0.0f;
 
         Debug.Log("entering running state");
 
-        player.sr.color = new Color(0.8f, 0.8f, 0.2f);
     }
 
     public override void Exit()
     {
+        player.anim.SetBool("isWalk", false);
         base.Exit();
     }
 

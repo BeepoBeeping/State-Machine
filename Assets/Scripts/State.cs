@@ -10,6 +10,8 @@ public abstract class State
     protected PlayerScript player;
     protected StateMachine sm;
 
+    public Animator anim;
+
     public float verticalInput;
     public float horizontalInput;
 

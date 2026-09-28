@@ -9,6 +9,7 @@ public class PlayerScript : MonoBehaviour
 {
     public SpriteRenderer sr;
     public Rigidbody2D rb;
+    public Animator anim;
     StateMachine sm;
 
     //define the actions

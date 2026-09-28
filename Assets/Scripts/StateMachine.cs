@@ -12,7 +12,6 @@ public class StateMachine
     public IdleState idleState;
     public JumpState jumpState;
     public RunState runState;
-    public DanceState danceState;
     
 
 
@@ -23,7 +22,6 @@ public class StateMachine
         idleState = new IdleState(player, this);
         jumpState = new JumpState(player, this);
         runState = new RunState(player, this);
-        danceState = new DanceState(player, this);
 
     }
 
