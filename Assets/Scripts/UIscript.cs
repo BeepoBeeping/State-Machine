@@ -16,7 +16,7 @@ public class UIscript : MonoBehaviour
 
     StringBuilder sb;
     // Start is called before the first frame update
-
+/*
     private void Awake()
     {
         if (ui == null)
@@ -51,7 +51,7 @@ public class UIscript : MonoBehaviour
         GUILayout.BeginArea(new Rect(30f, 30f, 800f, 800f));
         GUILayout.Label($"<color='white'><size=20>{text}</size></color>");
         GUILayout.EndArea();
-    }
+    } 
 
     public void ClearGui()
     {
@@ -62,4 +62,5 @@ public class UIscript : MonoBehaviour
     {
         sb.AppendLine(text);
     }
+   */
 }

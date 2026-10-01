@@ -41,7 +41,7 @@ public class RunState : State
 
         ReadInput();
 
-        if (player.interactAction.IsPressed())
+        if (player.moveAction.ReadValue<Vector2>().magnitude < 0.1f)
         {
             sm.ChangeState(sm.idleState);
         }
@@ -55,10 +55,10 @@ public class RunState : State
         player.rb.linearVelocity = player.moveAction.ReadValue<Vector2>() * speed;
 
 
-        UIscript.ui.DrawText("*** This is the running state ***\n");
+        /*UIscript.ui.DrawText("*** This is the running state ***\n");
         UIscript.ui.DrawText("Left/Right arrows = Move Sprite");
         UIscript.ui.DrawText("E = Idle State");
-        UIscript.ui.DrawText("Space = Jump state");
+        UIscript.ui.DrawText("Space = Jump state");*/
 
 
 

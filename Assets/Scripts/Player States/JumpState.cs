@@ -7,6 +7,7 @@ using UnityEngine;
 public class JumpState : State
 {
     float rotationSpeed;
+   
 
     
     public JumpState(PlayerScript player, StateMachine sm) : base(player, sm)
@@ -30,20 +31,15 @@ public class JumpState : State
     {
         ReadInput();
 
-        if (player.interactAction.IsPressed())
-        {
-            sm.ChangeState(sm.idleState);
-
-        }
 
         if (player.moveAction.ReadValue<Vector2>().magnitude > 0.1f )
         {
             sm.ChangeState(sm.runState);
         }
 
-        UIscript.ui.DrawText("*** This is the jumping state ***\n");
+        /*UIscript.ui.DrawText("*** This is the jumping state ***\n");
         UIscript.ui.DrawText("Left/Right arrows = Move State");
-        UIscript.ui.DrawText("E = Idle State");
+        UIscript.ui.DrawText("E = Idle State");*/
 
 
     }

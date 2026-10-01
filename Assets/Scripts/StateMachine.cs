@@ -12,7 +12,9 @@ public class StateMachine
     public IdleState idleState;
     public JumpState jumpState;
     public RunState runState;
-    
+    public CrouchState crouchState;
+    public EmoteState emoteState;
+
 
 
     //constructor
@@ -22,6 +24,8 @@ public class StateMachine
         idleState = new IdleState(player, this);
         jumpState = new JumpState(player, this);
         runState = new RunState(player, this);
+        crouchState = new CrouchState(player, this);
+        emoteState = new EmoteState(player, this);
 
     }
 

@@ -16,9 +16,8 @@ public class PlayerScript : MonoBehaviour
     public InputAction moveAction;
     public InputAction crouchAction;
     public InputAction jumpAction;
-    public InputAction danceAction;
     public InputAction dieAction;
-    public InputAction interactAction;
+    public InputAction danceAction;
 
 
 
@@ -33,7 +32,7 @@ public class PlayerScript : MonoBehaviour
         //initialise the actions
         moveAction = InputSystem.actions.FindAction("Move");
         crouchAction = InputSystem.actions.FindAction("Crouch");
-        interactAction = InputSystem.actions.FindAction("Interact");
+        danceAction = InputSystem.actions.FindAction("Interact");
         jumpAction = InputSystem.actions.FindAction("Jump");
 
 
@@ -44,7 +43,7 @@ public class PlayerScript : MonoBehaviour
         //do not put any of your own methods here - they go in the individual state files
         sm.Update();
 
-        UIscript.ui.DrawText("Current state= " + sm.currentState + "  Last state= " + sm.lastState);
+        /*UIscript.ui.DrawText("Current state= " + sm.currentState + "  Last state= " + sm.lastState);*/
 
     }
 

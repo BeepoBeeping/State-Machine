@@ -41,6 +41,16 @@ public class IdleState : State
             sm.ChangeState(sm.jumpState);
         }
 
+        if (player.crouchAction.IsPressed())
+        {
+            sm.ChangeState(sm.crouchState);
+        }
+
+        if (player.danceAction.IsPressed())
+        {
+            sm.ChangeState(sm.emoteState);
+        }
+
 
         //example of running a coroutine from a state and not directly from the monobehaviour
         if (player.crouchAction.IsPressed())
@@ -48,10 +58,10 @@ public class IdleState : State
             player.StartCoroutine( IdleCo() );
         }
 
-        UIscript.ui.DrawText("*** This is the idle state ***\n");
+        /*UIscript.ui.DrawText("*** This is the idle state ***\n");
         UIscript.ui.DrawText("Space = Jump State");
         UIscript.ui.DrawText("Left/Right arrows = Move State");
-        UIscript.ui.DrawText("C = Start the coroutine");
+        UIscript.ui.DrawText("C = Start the coroutine");*/
 
 
     }
