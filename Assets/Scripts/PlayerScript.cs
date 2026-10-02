@@ -35,7 +35,7 @@ public class PlayerScript : MonoBehaviour
         danceAction = InputSystem.actions.FindAction("Interact");
         jumpAction = InputSystem.actions.FindAction("Jump");
 
-
+        
     }
 
     private void Update()

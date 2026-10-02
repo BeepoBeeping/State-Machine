@@ -16,7 +16,7 @@ public class RunState : State
     public override void Enter()
     {
         player.anim.SetBool("isWalk", true);
-        speed = 3;
+        speed = 1.5f;
         base.Enter();
         horizontalInput = verticalInput = 0.0f;
 
@@ -50,6 +50,18 @@ public class RunState : State
         {
             sm.ChangeState(sm.jumpState);
         }
+
+        if (player.rb.linearVelocityX > 1)
+        {
+            player.sr.flipX = true;
+        }
+
+        if (player.rb.linearVelocityX < -1)
+        {
+            player.sr.flipX = false;
+        }
+
+
 
         //debug move gameObject
         player.rb.linearVelocity = player.moveAction.ReadValue<Vector2>() * speed;
